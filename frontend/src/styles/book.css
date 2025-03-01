@@ -1,0 +1,88 @@
+.books-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four books per row */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .book-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    background-color: white;
+    color: black;
+  }
+  
+  .book-img {
+    width: 200px;
+    height: 220px;
+    border-radius: 5px;
+  }
+  
+  .out-of-stock {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .available {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-left: 600px;
+    margin-right: 560px;
+    background-color: #ddd;
+  }
+  
+  .search-input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .search-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .search-button:hover {
+    background-color: darkblue;
+  }
+  
+  .search-icon {
+    font-size: 20px;
+    color: black;
+    border: #ddd;
+  }
+  
+  .home {
+    margin: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .home:hover {
+    background-color: gray;
+  }

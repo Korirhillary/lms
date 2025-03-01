@@ -1,0 +1,24 @@
+.borrowers-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .borrowers-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .borrowers-table th,
+  .borrowers-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .home{
+    margin: 20px;
+  }
+  
+  .home:hover{
+    background-color: blue;
+    color: white;
+  }

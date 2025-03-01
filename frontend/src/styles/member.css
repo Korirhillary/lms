@@ -1,0 +1,24 @@
+.members-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .members-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .members-table th,
+  .members-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .home{
+    margin: 20px;
+  }
+  
+  .home:hover{
+    background-color: blue;
+    color: white;
+  }
