@@ -12,10 +12,10 @@ Activate the virtualenv:
 source  hillary/bin/activate
 ``` 
 
-Installing fastapi and setting up dependencies :
+Setting up dependencies:
 
 ```sh
-pip install -r requirements.txt
+pip freeze > requirements.txt
 ```
 Run database migrations:
 

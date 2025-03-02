@@ -14,7 +14,7 @@ Starting the dev server
 npm run dev
 ```
 
-    Open http://localhost:3000 with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
 # Features
     1. Books Management - View and search books, check stock, and see availability.
