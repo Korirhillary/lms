@@ -1,12 +1,28 @@
-# React + Vite
+# Library Management System - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React + Vite-based frontend for a Library Management System. It interacts with the backend API to manage books, members, and transactions.
 
-Currently, two official plugins are available:
+# Installing dependencies
+In the frontend directory, run
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+npm i
 
-## Expanding the ESLint configuration
+Starting the dev server
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+npm run dev
+Open http://localhost:3000 with your browser to see the result.
+
+# Dependencies
+This frontend application uses the following dependencies:
+
+react: JavaScript library for building user interfaces
+react-router-dom: For routing and navigation between pages
+axios: For making HTTP requests to the backend API
+react-icons: For icons used in the UI
+vite: Next-gen build tool for faster development
+
+# Features
+Books Management - View and search books, check stock, and see availability.
+Members Management - View member information and outstanding debts.
+Transactions Management - View transaction history with issue/return dates and charges.
+Dashboard - Displays overall library statistics and quick links to manage books, members and transactions.

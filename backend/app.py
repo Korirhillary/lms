@@ -2,7 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from flask_restful import Api
-from flask_migrate import Migrate  
+from flask_migrate import Migrate 
 from models import db
 from resources.transaction import TransactionResource
 from resources.books import BookResource
@@ -15,7 +15,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'supersecretkey'
 
 db.init_app(app)
-migrate = Migrate(app, db)  
+migrate = Migrate(app, db) 
 api = Api(app)
 CORS(app)
 JWTManager(app)
@@ -23,7 +23,7 @@ JWTManager(app)
 api.add_resource(TransactionResource, '/transactions')
 api.add_resource(BookResource, '/books')
 api.add_resource(MemberResource, '/members')
-api.add_resource(IssuingResource, '/issuing')  
+api.add_resource(IssuingResource, '/issuing') 
 
 if __name__ == '__main__':
     with app.app_context():
