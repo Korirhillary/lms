@@ -15,7 +15,7 @@ source  hillary/bin/activate
 Setting up dependencies:
 
 ```sh
-pip freeze > requirements.txt
+pip install -r requirements.txt
 ```
 Run database migrations:
 

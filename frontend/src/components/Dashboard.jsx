@@ -27,7 +27,7 @@ const Dashboard = () => {
       <h1>Library Management System</h1>
       <div className="dashboard-content">
         <div className="stats">
-          <h2>Total Borrowing Books</h2>
+          <h2>Total Books Borrowed </h2>
           <div className="borrowing-count">{borrowingCount}</div>
         </div>
         <div className="menu">
