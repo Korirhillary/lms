@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
-import Books from "./components/Book";
+import Books from "./components/Books";
 import Members from "./components/Member";
 import Borrowers from "./components/Borrowers";
 import Transactions from "./components/Transaction";
