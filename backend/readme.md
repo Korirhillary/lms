@@ -3,13 +3,13 @@
 Create a virtualenv:
 
 ```sh
-python3 -m venv hillary
+python3 -m venv venv
 ```
 
 Activate the virtualenv:
 
 ```sh
-source  hillary/bin/activate
+source  venv/bin/activate
 ``` 
 
 Setting up dependencies:
@@ -29,3 +29,5 @@ In the backend directory, run this command:
 ```sh
 flask run
 ```
+
+![docs](//frontend tests.png)
