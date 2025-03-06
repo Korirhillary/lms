@@ -33,8 +33,6 @@ To run the tests, use the following command:
 ```sh
 pytest
 ```
-       ![LMS](./docs/backend%20tests.png)
-
 
 ## Frontend
 The frontend is built with React and Plain CSS.
@@ -58,4 +56,4 @@ To run the tests, use the following command:
 npm test
 ```         
 
-         ![LMS](./docs/frontend%20tests.png)
+      
