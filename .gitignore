@@ -1,0 +1,21 @@
+# Ignore virtual environment directories
+hillary/
+
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+
+# Ignore system files (macOS and Windows)
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.swp
