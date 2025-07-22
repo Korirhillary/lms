@@ -10,7 +10,7 @@ const Books = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/books")
+    fetch("https://lms.herokuapp.com/books")
       .then((res) => res.json())
       .then((data) => {
         setBooks(data);

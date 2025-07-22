@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../styles/dashboard.css";
-import bannerImage from "../assets/Banner.png";
+import bannerImage from "../assets/lms.png";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5000/issuing")
+      .get("https://lms.herokuapp.com/issuing")
       .then((response) => {
         const count = response.data.filter((item) => !item.is_cleared).length;
         setBorrowingCount(count);
