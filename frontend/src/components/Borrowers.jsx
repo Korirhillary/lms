@@ -18,7 +18,7 @@ const Borrowers = () => {
   };
 
   const markBookReturn = (bookName, email) => {
-    fetch("http://127.0.0.1:5000/issuing", {
+    fetch("https://lms.herokuapp.com/issuing", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
