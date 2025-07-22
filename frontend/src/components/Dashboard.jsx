@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../styles/dashboard.css";
-import bannerImage from "../assets/Banner.png";
+import bannerImage from "../assets/lms.png";
 
 const Dashboard = () => {
   const navigate = useNavigate();
