@@ -1,0 +1,240 @@
+.borrowers-page { animation: fadeIn 0.3s ease; }
+
+/* ── Summary stat cards ───────────────────────────────────────── */
+.borrower-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.bstat-card {
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: transform var(--transition);
+}
+.bstat-card:hover { transform: translateY(-2px); }
+
+.bstat-icon {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.bstat-icon svg { width: 21px; height: 21px; color: #fff; stroke: #fff; }
+
+.bstat-num {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  line-height: 1;
+}
+.bstat-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
+
+/* ── Tab bar ──────────────────────────────────────────────────── */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  color: var(--text-muted);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.tab-btn:hover { color: var(--text-primary); }
+.tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+.tab-count {
+  background: var(--bg-input);
+  border-radius: 20px;
+  padding: 2px 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.tab-btn.active .tab-count { background: rgba(232,65,90,0.15); color: var(--accent); }
+
+/* ── Table controls ───────────────────────────────────────────── */
+.table-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.total-count {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── Row highlight for overdue rows ──────────────────────────── */
+.row-overdue { background: rgba(239,68,68,0.03); }
+.row-overdue:hover { background: rgba(239,68,68,0.07) !important; }
+
+/* ── Due date red text ────────────────────────────────────────── */
+.due-date-overdue { color: #ef4444; font-weight: 700; }
+
+/* ── Overdue days badge ───────────────────────────────────────── */
+.overdue-days-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  background: rgba(239,68,68,0.15);
+  color: #ef4444;
+  white-space: nowrap;
+}
+
+/* ── Fine amount ──────────────────────────────────────────────── */
+.fine-amount { font-weight: 700; color: #ef4444; font-size: 0.82rem; white-space: nowrap; }
+
+/* ── Charge badge ─────────────────────────────────────────────── */
+.charge-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  background: rgba(59,130,246,0.12);
+  color: #3b82f6;
+  white-space: nowrap;
+}
+
+/* ── Cleared badge ────────────────────────────────────────────── */
+.cleared-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 0.73rem;
+  font-weight: 700;
+}
+.cleared-badge.yes { background: rgba(34,197,94,0.12);  color: #22c55e; }
+.cleared-badge.no  { background: rgba(234,179,8,0.12);  color: #eab308; }
+
+/* ── Status badges ────────────────────────────────────────────── */
+.status-active        { background: rgba(59,130,246,0.12);  color: #3b82f6; }
+.status-returned      { background: rgba(34,197,94,0.12);   color: #22c55e; }
+.status-returned-late { background: rgba(234,179,8,0.12);   color: #eab308; }
+.status-overdue       { background: rgba(239,68,68,0.12);   color: #ef4444; }
+.status-neutral       { background: var(--bg-input);        color: var(--text-muted); }
+
+/* ── Loading / empty ──────────────────────────────────────────── */
+.loading-state {
+  display: flex; align-items: center; justify-content: center;
+  gap: 14px; color: var(--text-muted); flex-direction: column;
+}
+.spinner {
+  width: 32px; height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .borrower-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .borrower-stats { grid-template-columns: 1fr 1fr; }
+  .tab-btn { padding: 10px 12px; font-size: 0.8rem; }
+}
+
+
+/* Return button styles */
+.return-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #e8415a;
+  color: white;
+  font-weight: 600;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 90px;
+}
+
+.return-btn:hover:not(:disabled) {
+  background: #d13b52;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(232, 65, 90, 0.3);
+}
+
+.return-btn:disabled {
+  background: #ccc;
+  cursor: wait;
+  opacity: 0.7;
+}
+
+/* Small spinner for button */
+.spinner-small {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 6px;
+}
+
+/* Message banner styles */
+.message-banner {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  animation: slideDown 0.3s ease;
+}
+
+.message-banner.success {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid #22c55e;
+}
+
+.message-banner.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid #ef4444;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
